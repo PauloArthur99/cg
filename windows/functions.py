@@ -211,6 +211,9 @@ class NewObjectWindow(wi.NewObjectWindowInterface):
 	def submit(self):
 		# get object name
 		name = self.ent_name.get()
+
+		# get object color
+		fill = self.ent_color.get() 
 		
 		if (not name):
 			print("No name specified")
@@ -230,6 +233,7 @@ class NewObjectWindow(wi.NewObjectWindowInterface):
 			name,
 			coord,
 			is_closed,
+			fill
 		)
 
 		# update object names list box

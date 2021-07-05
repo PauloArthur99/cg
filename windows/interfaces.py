@@ -231,9 +231,11 @@ class NewObjectWindowInterface(SecondWindow):
 		self.fr_top   = Frame(self.mainframe)
 		self.lb_name  = Label(self.fr_top, text = "Name")
 		self.lb_coord = Label(self.fr_top, text = "Coordinates")
+		self.lb_color = Label(self.fr_top, text = "Color")
 		self.lb_isClosed = Label(self.fr_top, text = "Is a closed object")
 		self.ent_name  = tk.Entry(self.fr_top)
 		self.ent_coord = tk.Entry(self.fr_top)
+		self.ent_color = tk.Entry(self.fr_top)
 		self.chkValue = tk.BooleanVar() 
 		self.checkB_isClosed = tk.Checkbutton(self.fr_top, variable = self.chkValue)
 
@@ -243,8 +245,10 @@ class NewObjectWindowInterface(SecondWindow):
 		self.ent_name.grid(       row = 1, column = 0)
 		self.lb_coord.grid(       row = 2, column = 0)
 		self.ent_coord.grid(      row = 3, column = 0)
-		self.lb_isClosed.grid(    row = 4, column = 0)
-		self.checkB_isClosed.grid(row = 5, column = 0)
+		self.lb_color.grid(       row = 4, column = 0)
+		self.ent_color.grid(      row = 5, column = 0)
+		self.lb_isClosed.grid(    row = 6, column = 0)
+		self.checkB_isClosed.grid(row = 7, column = 0)
 
 	def __build_fr_bottom(self):
 		# create bottom frame
