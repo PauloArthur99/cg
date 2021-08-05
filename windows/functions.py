@@ -450,9 +450,9 @@ class NewCurveWindow(wi.NewCurveWindowInterface):
 			print("No coordinates specified")
 			return
 		
-		if (len(coord) % 4 != 0):
-			print("coordinates list lenght should be 4 + 3x, where x >= 0")
-			return
+		#if (len(coord) % 4 != 0):
+		#	print("coordinates list lenght should be 4 + 3x, where x >= 0")
+		#	return
 
 		self.mainwindow.canvas.create_curve(name, coord, fill = color)
 
