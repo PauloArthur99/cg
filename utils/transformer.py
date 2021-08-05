@@ -3,10 +3,12 @@ import numpy as np
 
 
 class Transformer:
+	# Identity
 	@staticmethod
 	def identity():
 		return [[1.0, 0, 0], [0, 1.0, 0], [0, 0, 1.0]]
 
+	# returns a rotation matrix to the given angle an reference point
 	@staticmethod
 	def rotation(matrix, angle, ref_point):
 		cos = math.cos(math.radians(angle))
@@ -22,6 +24,7 @@ class Transformer:
 			result = Transformer.translation(inter_result.tolist(), ref_point)
 			return result
 	
+	# returns a rotation matrix to the given reference point
 	@staticmethod
 	def translation(matrix, ref_point):
 		dx = ref_point[0]
@@ -30,6 +33,7 @@ class Transformer:
 		result = np.dot(np.array(matrix), translation_array)
 		return result.tolist()
 
+	# returns a scaling matrix to the given scale coefficient and center point
 	@staticmethod
 	def scale(matrix, scale_coef, center_point):
 		sx = scale_coef[0]
